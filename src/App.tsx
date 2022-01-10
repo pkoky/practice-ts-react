@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+type Props = {
+  text: string
+}
+
+const Button: React.VFC<Props> = (props) =>  {
+  return (
+    <div>
+        {props.text}
+    </div>
+  )
+}
+
+const Sample1: React.VFC = () => {
+  return <div>sample1</div>
+}
+
+const Sample2= (props: Props) => {
+  return <div>{ props.text }</div>
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button text="typeScript"/>
+        <Sample1 />
+        <Sample2 text="sample2"/>
       </header>
     </div>
+
   );
 }
 
