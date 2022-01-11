@@ -37,7 +37,7 @@ const Button: React.VFC<ButtonProps> = ({textValue, isDisabled, fontSize, border
 
 
 function App() {
-  const [buttonText, setButtonText] = useState<any>();
+  const [buttonText, setButtonText] = useState<any>('');
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
   const [fontSize, setFontSize] = useState<number>(10);
   const [borderRadius, setBorderRadius] = useState<number>(0);
