@@ -5,7 +5,7 @@ import { FontSize } from './components/FontSize';
 import { BorderRadius } from './components/BorderRadius';
 import { Opacity } from './components/Opacity';
 import { BackgroundColor } from './components/Background';
-import { Color } from './components/Color'; 
+import { Color } from './components/Color';
 
 type ButtonProps = {
   textValue: string;
@@ -13,6 +13,8 @@ type ButtonProps = {
   fontSize: number;
   borderRadius: number;
   opacity: number;
+  // 型定義のときにanyはほぼ使用しません。なるべく特定の型を指定したほうがいいです！
+  // anyを指定すればエラーは無くなり、あらゆる型の値を入力できるようになりますが、TSを使用する意味が薄れてしまいます！
   background: any;
   color: any;
 }
@@ -37,6 +39,8 @@ const Button: React.VFC<ButtonProps> = ({textValue, isDisabled, fontSize, border
 
 
 function App() {
+
+  // useState()に初期値を渡すと、型引数を指定しなくても、TSは勝手にstateの型を推論してくれます。
   const [buttonText, setButtonText] = useState<any>('');
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
   const [fontSize, setFontSize] = useState<number>(10);
@@ -48,10 +52,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button 
-          textValue={buttonText} 
-          isDisabled={isDisabled} 
-          fontSize={fontSize} 
+        <Button
+          textValue={buttonText}
+          isDisabled={isDisabled}
+          fontSize={fontSize}
           borderRadius={borderRadius}
           opacity={opacity}
           background={background}
