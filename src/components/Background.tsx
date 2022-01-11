@@ -1,5 +1,5 @@
 type BackgroundProps = {
-  background: any;
+  background: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 

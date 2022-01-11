@@ -1,5 +1,5 @@
 type ColorProps = {
-  color: any;
+  color: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
