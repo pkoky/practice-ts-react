@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/practice-ts-react/static/css/main.31d6cfe0.css",
+    "main.js": "/practice-ts-react/static/js/main.6d4e05d4.js",
+    "index.html": "/practice-ts-react/index.html",
+    "main.6d4e05d4.js.map": "/practice-ts-react/static/js/main.6d4e05d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.6d4e05d4.js"
+  ]
+}
